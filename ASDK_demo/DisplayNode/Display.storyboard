@@ -44,7 +44,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yu-HI-qqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="884"/>
+            <point key="canvasLocation" x="25" y="891"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bxS-Lg-w0q">
+            <objects>
+                <viewController storyboardIdentifier="tableNode" id="hKG-RE-8F6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ml2-RK-ZQk"/>
+                        <viewControllerLayoutGuide type="bottom" id="7N9-zZ-8iN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2d-Rl-usy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyA-1X-Vfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="163"/>
         </scene>
         <!--Button NodeVC-->
         <scene sceneID="siN-v9-3Ss">
@@ -62,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EP4-vt-uNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="1584"/>
+            <point key="canvasLocation" x="964" y="881"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="COl-Dz-6JL">

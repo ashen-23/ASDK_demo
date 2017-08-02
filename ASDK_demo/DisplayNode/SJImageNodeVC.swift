@@ -18,7 +18,7 @@ class SJImageNodeVC: UIViewController {
         
         let aNode = SJImageNode()
         
-        aNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64)
+        aNode.frame = SJScreenRect
         
         self.view.addSubnode(aNode)        
 

@@ -16,7 +16,7 @@ class SJNodeVC: UIViewController {
 
     lazy var tableView = ASTableNode()
     
-    lazy var titles = ["image", "text", "button"]
+    lazy var titles = ["image", "text", "button", "table"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,9 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
         case 2:
             
             identifier = "buttonNode"
+            
+        case 3:
+            identifier = "tableNode"
             
         default:
             break

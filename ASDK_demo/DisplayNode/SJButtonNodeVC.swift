@@ -16,7 +16,7 @@ class SJButtonNodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64)
+        buttonNode.frame = SJScreenRect
         
         view.addSubnode(buttonNode)
         

@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="25" y="891"/>
         </scene>
-        <!--View Controller-->
+        <!--Table NodeVC-->
         <scene sceneID="bxS-Lg-w0q">
             <objects>
-                <viewController storyboardIdentifier="tableNode" id="hKG-RE-8F6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableNode" id="hKG-RE-8F6" customClass="SJTableNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ml2-RK-ZQk"/>
                         <viewControllerLayoutGuide type="bottom" id="7N9-zZ-8iN"/>

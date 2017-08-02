@@ -33,12 +33,15 @@ class SJTableNodeVC: UIViewController {
         tableNode?.delegate = self
         tableNode?.dataSource = self
         
+        // add table header
+        let header = SJableHeader()
+        header.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 125)
+        tableNode?.view.tableHeaderView = header.view
+        
         view.addSubnode(tableNode!)
     }
 
 }
-
-
 
 extension SJTableNodeVC: ASTableDelegate, ASTableDataSource {
 
@@ -124,6 +127,8 @@ fileprivate class SJTableNoe: ASCellNode {
         addSubnode(imgNode) // 必须要添加
         
         textNode.attributedText = NSAttributedString(string: person?.name ?? "", attributes: defaultAttri())
+        
+        textNode.style.flexShrink = 1 // 保证能换行
         addSubnode(textNode)
     }
     
@@ -141,7 +146,7 @@ fileprivate class SJTableNoe: ASCellNode {
     }
 }
 
-
+// view header
 class SJableHeaderNode: ASDisplayNode {
     
     lazy var textNode = ASTextNode()
@@ -161,6 +166,59 @@ class SJableHeaderNode: ASDisplayNode {
         return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20), child: textNode)
     }
 }
+
+// table header
+class SJableHeader: ASDisplayNode {
+    
+    lazy var textNode = ASTextNode()
+    
+    lazy var icons = [ASImageNode]()
+    
+    override init() {
+        super.init()
+        
+        textNode.attributedText = NSAttributedString(string: "table headerView", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18), NSForegroundColorAttributeName: UIColor.black])
+        
+        addSubnode(textNode)
+        
+        backgroundColor = UIColor.lightGray
+        
+        // add image node
+        for _ in 0..<4 {
+        
+            let aImg = ASNetworkImageNode()
+            aImg.style.preferredSize = CGSize(width: 30, height: 30)
+            aImg.url = randomImgUrl(width: 30)
+            let width = 30 * UIScreen.main.scale
+            
+            aImg.imageModificationBlock = { image in
+                
+                let rect = CGRect(x: 0, y: 0, width: width, height: width)
+                UIGraphicsBeginImageContextWithOptions(image.size, false, UIScreen.main.scale)
+                
+                image.draw(in: rect)
+                let modifiedImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                
+                return modifiedImage
+            }
+            
+            icons.append(aImg)
+            addSubnode(aImg)
+        }
+        
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        let stackH = ASStackLayoutSpec(direction: .horizontal, spacing: 10, justifyContent: .start, alignItems: .center, children: icons)
+        
+        let stackV = ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .start, alignItems: .center, children: [textNode, stackH])
+        
+        return ASRelativeLayoutSpec(horizontalPosition: .center, verticalPosition: .center, sizingOption: .minimumSize, child: stackV)
+    }
+}
+
 
 //*****************************************
 //MARK: - data struct
@@ -201,7 +259,8 @@ fileprivate struct SJPerson {
     
     init() {
         
-        name = randomName()
+        let randon = Int(arc4random_uniform(500) + 10)
+        name = randomName(length: randon)
         avator = randomImgUrl()
     }
 }

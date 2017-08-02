@@ -30,17 +30,17 @@ func SJColor(_ red:CGFloat,green:CGFloat,blue:CGFloat,alpha:CGFloat = 1.0) ->UIC
 }
 
 /// 随机图片路径
-func randomImgUrl() -> URL? {
+func randomImgUrl(width: Int = 350) -> URL? {
 
-    let width = 350 + 2 * arc4random_uniform(10)
-    let height = 350 + 4 * arc4random_uniform(10)
+    let w = width + 2 * Int(arc4random_uniform(10))
+    let h = width + 4 * Int(arc4random_uniform(10))
     
-    return URL(string: "https://placekitten.com/\(width)/\(height)")
+    return URL(string: "https://placekitten.com/\(w)/\(h)")
 }
 
 func randomName(length: Int = 7) -> String {
 
-    let letters: NSString = "abcdefghijklmnopqrstuvwxyz"
+    let letters: NSString = "abcdefghijklmnopqrstuvwxyz "
     var str = ""
     
     for _ in 0..<length {

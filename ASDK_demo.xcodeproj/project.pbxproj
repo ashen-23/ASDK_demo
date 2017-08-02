@@ -14,6 +14,7 @@
 		95AC189E1F3175AE00097ADE /* SJTextNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */; };
 		95AC18A11F31795F00097ADE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A01F31795F00097ADE /* Toast.swift */; };
 		95AC18A31F31797200097ADE /* SJTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A21F31797200097ADE /* SJTextNode.swift */; };
+		95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */; };
 		95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */; };
 		95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */; };
 		95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */; };
@@ -35,6 +36,7 @@
 		95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTextNodeVC.swift; sourceTree = "<group>"; };
 		95AC18A01F31795F00097ADE /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		95AC18A21F31797200097ADE /* SJTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTextNode.swift; sourceTree = "<group>"; };
+		95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJButtonNodeVC.swift; sourceTree = "<group>"; };
 		95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTabBarVC.swift; sourceTree = "<group>"; };
 		95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNodeVC.swift; sourceTree = "<group>"; };
 		95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJImageNodeVC.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				95D9F6611F30803600B7BC96 /* Display.storyboard */,
 				95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */,
 				95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */,
+				95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */,
 			);
 			path = DisplayNode;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */,
 				958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */,
 				95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */,
+				95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */,
 				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

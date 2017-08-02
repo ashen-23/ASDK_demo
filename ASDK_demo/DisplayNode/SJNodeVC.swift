@@ -21,7 +21,7 @@ class SJNodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Node Overview list"
+        title = "Node Overview"
         configTable()
     }
 
@@ -68,7 +68,11 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
         case 1:
 
             identifier = "textNode"
-
+        
+        case 2:
+            
+            identifier = "buttonNode"
+            
         default:
             break
         }

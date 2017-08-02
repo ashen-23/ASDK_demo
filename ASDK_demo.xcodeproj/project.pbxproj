@@ -11,7 +11,9 @@
 		958E07F81F2AD62B0078A484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F61F2AD62B0078A484 /* Main.storyboard */; };
 		958E07FA1F2AD62B0078A484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F91F2AD62B0078A484 /* Assets.xcassets */; };
 		958E07FD1F2AD62B0078A484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958E07FB1F2AD62B0078A484 /* LaunchScreen.storyboard */; };
-		95AC189C1F31734000097ADE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC189B1F31734000097ADE /* Toast.swift */; };
+		95AC189E1F3175AE00097ADE /* SJTextNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */; };
+		95AC18A11F31795F00097ADE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A01F31795F00097ADE /* Toast.swift */; };
+		95AC18A31F31797200097ADE /* SJTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A21F31797200097ADE /* SJTextNode.swift */; };
 		95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */; };
 		95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */; };
 		95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */; };
@@ -30,7 +32,9 @@
 		958E07F91F2AD62B0078A484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		958E07FC1F2AD62B0078A484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958E07FE1F2AD62B0078A484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		95AC189B1F31734000097ADE /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTextNodeVC.swift; sourceTree = "<group>"; };
+		95AC18A01F31795F00097ADE /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		95AC18A21F31797200097ADE /* SJTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTextNode.swift; sourceTree = "<group>"; };
 		95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTabBarVC.swift; sourceTree = "<group>"; };
 		95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNodeVC.swift; sourceTree = "<group>"; };
 		95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJImageNodeVC.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				95D9F6551F30786400B7BC96 /* DisplayNode */,
 				95D9F6561F30786400B7BC96 /* Game */,
 				95D9F6581F30787800B7BC96 /* Other */,
+				95AC189F1F31794300097ADE /* View */,
 				958E07F21F2AD62B0078A484 /* AppDelegate.swift */,
 				958E07F61F2AD62B0078A484 /* Main.storyboard */,
 				95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */,
@@ -82,12 +87,22 @@
 			path = ASDK_demo;
 			sourceTree = "<group>";
 		};
+		95AC189F1F31794300097ADE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95AC18A01F31795F00097ADE /* Toast.swift */,
+				95AC18A21F31797200097ADE /* SJTextNode.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		95D9F6551F30786400B7BC96 /* DisplayNode */ = {
 			isa = PBXGroup;
 			children = (
 				95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */,
-				95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */,
 				95D9F6611F30803600B7BC96 /* Display.storyboard */,
+				95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */,
+				95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */,
 			);
 			path = DisplayNode;
 			sourceTree = "<group>";
@@ -110,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				95D9F6631F30805900B7BC96 /* SJUtils.swift */,
-				95AC189B1F31734000097ADE /* Toast.swift */,
 				958E07FE1F2AD62B0078A484 /* Info.plist */,
 				958E07FB1F2AD62B0078A484 /* LaunchScreen.storyboard */,
 				958E07F91F2AD62B0078A484 /* Assets.xcassets */,
@@ -262,11 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D9F6641F30805900B7BC96 /* SJUtils.swift in Sources */,
-				95AC189C1F31734000097ADE /* Toast.swift in Sources */,
+				95AC189E1F3175AE00097ADE /* SJTextNodeVC.swift in Sources */,
 				95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */,
+				95AC18A31F31797200097ADE /* SJTextNode.swift in Sources */,
 				95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */,
 				958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */,
 				95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */,
+				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

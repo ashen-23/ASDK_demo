@@ -16,7 +16,7 @@ class SJNodeVC: UIViewController {
 
     lazy var tableView = ASTableNode()
     
-    lazy var titles = ["image node"]
+    lazy var titles = ["image", "text", "button"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,17 +59,23 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
 
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
+        var identifier = "imageNode"
         switch indexPath.row {
         case 0:
             
-            let aImgVC = storyBoard(name: SBName, identifier: "imageNode")
-            aImgVC.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(aImgVC, animated: true)
-            
+            identifier = "imageNode"
+        
+        case 1:
+
+            identifier = "textNode"
+
         default:
             break
         }
         
+        let aVC = storyBoard(name: SBName, identifier: identifier)
+        aVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(aVC, animated: true)
     }
     
 }

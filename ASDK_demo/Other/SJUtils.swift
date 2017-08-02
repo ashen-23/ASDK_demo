@@ -23,3 +23,8 @@ func defaultAttri() -> [String: Any] {
 
     return [NSFontAttributeName: UIFont.systemFont(ofSize: 16), NSForegroundColorAttributeName: UIColor.black]
 }
+
+public func SJColor(_ red:CGFloat,green:CGFloat,blue:CGFloat,alpha:CGFloat = 1.0) ->UIColor
+{
+    return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
+}

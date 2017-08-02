@@ -20,7 +20,8 @@ class SJImageNodeVC: UIViewController {
         
         aNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64)
         
-        self.view.addSubnode(aNode)
+        self.view.addSubnode(aNode)        
+
     }
 
 }
@@ -41,6 +42,8 @@ class SJImageNode: ASDisplayNode {
         
         mImageNode.style.preferredSize = imgSize // 设置大小
         mImageNode.image = UIImage(named: "yaoming")
+        mImageNode.borderWidth = 0.5 // border
+        mImageNode.borderColor = UIColor.blue.cgColor
         
         mNetImgNode.style.preferredSize = imgSize
         mNetImgNode.defaultImage = UIImage(named: "default") // 默认图
@@ -73,8 +76,10 @@ class SJImageNode: ASDisplayNode {
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
+        // stack
         let aStack = ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .start, alignItems: .center, children: [mImageNode, mImgText,  mNetImgNode, mNetText])
         
+        // 居中
         return ASRelativeLayoutSpec(horizontalPosition: .center, verticalPosition: .center, sizingOption: .minimumSize, child: aStack)
        // return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30), child: aStack)
     }

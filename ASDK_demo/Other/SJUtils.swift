@@ -17,3 +17,9 @@ func storyBoard(name: String, identifier: String? = nil) -> UIViewController {
     }
     return aSB.instantiateInitialViewController()!
 }
+
+
+func defaultAttri() -> [String: Any] {
+
+    return [NSFontAttributeName: UIFont.systemFont(ofSize: 16), NSForegroundColorAttributeName: UIColor.black]
+}

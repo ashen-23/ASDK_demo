@@ -13,50 +13,16 @@ private let linkKey = "linkKey"
 
 class SJTextNodeVC: UIViewController {
 
-    lazy var textNode = ASTextNode()
-    
-    var autoTextNode: SJTextNode?
+    fileprivate var textNode: SJTextDisplay?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addTouchText()
-    }
-
-    func addTouchText() {
+        textNode = SJTextDisplay(delegate: self)
         
-        textNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 200)
-        self.view.addSubnode(textNode)
-        configNode()
+        textNode?.frame = SJScreenRect
+        view.addSubnode(textNode!)
         
-        autoTextNode = SJTextNode(text: displayStr)
-        autoTextNode?.frame = CGRect(x: 0, y: 300, width: UIScreen.main.bounds.size.width, height: 200)
-        view.addSubnode(autoTextNode!)
-    }
-    
-    func configNode() {
-        
-        textNode.isUserInteractionEnabled = true
-        textNode.linkAttributeNames = [linkKey]
-        textNode.delegate = self
-        textNode.layer.as_allowsHighlightDrawing = true // 设置为true, 选中高亮才能生效
-        
-        let result = NSMutableAttributedString(string: displayStr, attributes: defaultAttri())
-        
-        let range = (displayStr as NSString).range(of: "点我跳转")
-        result.addAttributes(linkAttrs(), range: range)
-        
-        textNode.attributedText = result
-    }
-    
-    func linkAttrs() -> [String: Any] {
-        
-        // NSUnderlineStyleAttributeName 使用swift会崩溃, 自动转换成int吧
-        return [linkKey: "点我跳转",
-                NSFontAttributeName: UIFont.systemFont(ofSize: 16),
-                NSForegroundColorAttributeName: SJColor(20, green: 130, blue: 240),
-                NSUnderlineStyleAttributeName: 1
-        ]
     }
 
 }
@@ -77,5 +43,68 @@ extension SJTextNodeVC: ASTextNodeDelegate {
 }
 
 
+// MARK: - 显示的text node
+fileprivate class SJTextDisplay: ASDisplayNode {
 
-private let displayStr = "Lorem ipsum @dolor sit er elit lamet, @consectetaur cillium #adipisicing# pecu, sed do #eiusmod tempor# incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.点我跳转 Duis aute irure dolor in reprehenderit in voluptate velit esse #cillum dolore# eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam @liber te conscient to factor tum poen legum odioque civiuda."
+    lazy var textNode = ASTextNode()
+    
+    var textNode1: SJTextNode?
+    var textNode2: SJTextNode?
+
+    init(delegate: ASTextNodeDelegate) {
+        super.init()
+        
+        addTouchText()
+        configNode(delegate: delegate)
+
+    }
+    
+    func addTouchText() {
+        
+        textNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 180)
+        self.view.addSubnode(textNode)
+        
+        textNode1 = SJTextNode(text: displayStr)
+        textNode1?.frame = CGRect(x: 0, y: 270, width: UIScreen.main.bounds.size.width, height: 180)
+        view.addSubnode(textNode1!)
+        
+        textNode2 = SJTextNode(text: displayStr, displaySignal: false)
+        textNode2?.frame = CGRect(x: 0, y: 470, width: UIScreen.main.bounds.size.width, height: 180)
+        view.addSubnode(textNode2!)
+    }
+    
+    func configNode(delegate: ASTextNodeDelegate) {
+        
+        textNode.isUserInteractionEnabled = true
+        textNode.linkAttributeNames = [linkKey]
+        textNode.delegate = delegate
+        textNode.layer.as_allowsHighlightDrawing = true // 设置为true, 选中高亮才能生效
+        
+        let result = NSMutableAttributedString(string: displayStr, attributes: defaultAttri())
+        
+        let range = (displayStr as NSString).range(of: "点我跳转")
+        result.addAttributes(linkAttrs(), range: range)
+        
+        textNode.attributedText = result
+    }
+    
+    func linkAttrs() -> [String: Any] {
+        
+        // NSUnderlineStyleAttributeName 使用swift会崩溃, 自动转换成int吧
+        return [linkKey: "点我跳转",
+                NSFontAttributeName: UIFont.systemFont(ofSize: 16),
+                NSForegroundColorAttributeName: SJColor(20, green: 130, blue: 240),
+                NSUnderlineStyleAttributeName: 1
+        ]
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        return ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .center, alignItems: .center, children: [textNode, textNode1!, textNode2!])
+    }
+    
+}
+
+
+
+private let displayStr = "Lorem ipsum @dolor sit er elit, @consectetaur cillium #adipisicing# pecu, @sed do #eius@mod tempor# incididunt magna aliqua. Ut enim ad #minim veniam#, nisi ut aliquip ex ea commodo consequat.点我跳转 Duis aute irure dolor in reprehenderit in voluptate velit esse #cillum dolore# eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, Nam @liber te conscient to factor tum poen legum odioque civiuda."

@@ -50,6 +50,8 @@ fileprivate class SJTextDisplay: ASDisplayNode {
     
     var textNode1: SJTextNode?
     var textNode2: SJTextNode?
+    
+    var titleNodes = [ASTextNode]()
 
     init(delegate: ASTextNodeDelegate) {
         super.init()
@@ -57,20 +59,25 @@ fileprivate class SJTextDisplay: ASDisplayNode {
         addTouchText()
         configNode(delegate: delegate)
 
+        addTitles()
     }
     
     func addTouchText() {
         
         textNode.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 180)
         self.view.addSubnode(textNode)
+        textNode.style.height = ASDimensionMake(130)
         
         textNode1 = SJTextNode(text: displayStr)
         textNode1?.frame = CGRect(x: 0, y: 270, width: UIScreen.main.bounds.size.width, height: 180)
         view.addSubnode(textNode1!)
-        
+        textNode1?.style.height = ASDimensionMake(130)
+
         textNode2 = SJTextNode(text: displayStr, displaySignal: false)
         textNode2?.frame = CGRect(x: 0, y: 470, width: UIScreen.main.bounds.size.width, height: 180)
         view.addSubnode(textNode2!)
+        textNode2?.style.height = ASDimensionMake(130)
+
     }
     
     func configNode(delegate: ASTextNodeDelegate) {
@@ -98,9 +105,33 @@ fileprivate class SJTextDisplay: ASDisplayNode {
         ]
     }
     
+    func addTitles() {
+    
+        for _ in 0..<3 {
+        
+            let aText = ASTextNode()
+            
+            titleNodes.append(aText)
+            
+            addSubnode(aText)
+        }
+        
+        titleNodes[2].attributedText = NSAttributedString(string: "ASDK demo", attributes: defaultAttri())
+        titleNodes[1].attributedText = NSAttributedString(string: "custom", attributes: defaultAttri())
+        titleNodes[0].attributedText = NSAttributedString(string: "ignore symbal", attributes: defaultAttri())
+
+    }
+    
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
-        return ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .center, alignItems: .center, children: [textNode, textNode1!, textNode2!])
+        var children = [textNode, textNode1!, textNode2!]
+        var i = 2
+        titleNodes.forEach {
+            children.insert($0, at: i)
+            i -= 1
+        }
+        
+        return ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .center, children: children)
     }
     
 }

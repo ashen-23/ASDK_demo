@@ -19,7 +19,7 @@ class SJCollectionNodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        grade = SJClass.create()
+        grade = SJClass.create(count: 3, rows: 12)
 
         configCollection()
     }
@@ -37,13 +37,42 @@ class SJCollectionNodeVC: UIViewController {
         collectionNode?.delegate = self
         collectionNode?.dataSource = self
         
-        collectionNode?.frame = SJScreenRect
+        collectionNode?.frame = UIScreen.main.bounds
         view.addSubnode(collectionNode!)
         
         // add view header
         collectionNode?.registerSupplementaryNode(ofKind: UICollectionElementKindSectionHeader)
     }
     
+    
+    // 添加新数据
+    func fetchMore(context: ASBatchContext) {
+    
+        let newRows = SJClass(rows: 30)
+        
+        DispatchQueue.main.async {
+
+            self.view.makeToast("刷新一组新数据,共\(newRows.persons.count)条")
+            self.insertRows(data: newRows)
+            context.completeBatchFetching(true)
+        }
+    }
+    
+    func insertRows(data: SJClass) {
+        let section = (grade?.count ?? 1) - 1
+        grade?[section].persons.append(contentsOf: data.persons)
+
+        var index = (grade?.last?.persons.count ?? 1) - data.persons.count
+        
+        var indexPath = [IndexPath]()
+        data.persons.forEach { person in
+            indexPath.append(IndexPath(row: index, section: section))
+            index += 1
+        }
+        
+        collectionNode?.insertItems(at: indexPath)
+
+    }
 }
 
 // data source and delegate
@@ -81,6 +110,13 @@ extension SJCollectionNodeVC: ASCollectionDelegate, ASCollectionDataSource {
         return HeaderNode(title: header)
     }
     
+    // 自动刷新
+    func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+        
+        context.beginBatchFetching()
+        
+        fetchMore(context: context)
+    }
 }
 
 

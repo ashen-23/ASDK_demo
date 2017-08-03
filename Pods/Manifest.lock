@@ -6,6 +6,7 @@ PODS:
     - AsyncDisplayKit/Core
     - PINRemoteImage/iOS (= 3.0.0-beta.8)
     - PINRemoteImage/PINCache
+  - PagingMenuController (2.2.0)
   - PINCache (3.0.1-beta.4):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
     - PINCache/Core (= 3.0.1-beta.4)
@@ -24,15 +25,17 @@ PODS:
 
 DEPENDENCIES:
   - AsyncDisplayKit
+  - PagingMenuController
   - SnapKit
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: 2234dd8d8770a5ed72936b3f8394bd5a807765f6
+  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   PINCache: a89c8f609232afac77128557bd12c861844423d7
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: b123536b0f291498cbef9314a7f0c511dff40777
+PODFILE CHECKSUM: bca7eb25dbd54be362b6975fb818840be7d27ca8
 
 COCOAPODS: 1.2.1

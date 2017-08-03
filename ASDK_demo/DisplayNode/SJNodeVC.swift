@@ -10,18 +10,16 @@ import UIKit
 import AsyncDisplayKit
 import SnapKit
 
-private let SBName = "Display"
-
 class SJNodeVC: UIViewController {
 
     lazy var tableView = ASTableNode()
     
-    lazy var titles = ["image", "text", "button", "table", "collection"]
+    lazy var titles = ["image", "text", "button", "table", "collection", "layout examples"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Node Overview"
+        title = "Overview"
         configTable()
     }
 
@@ -60,6 +58,8 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
         var identifier = "imageNode"
+        var name = SBDisplay
+        
         switch indexPath.row {
         case 0:
             
@@ -80,11 +80,16 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
             
             identifier = "collectionNode"
             
+        case 5:
+            
+            identifier = "layoutSpec"
+            name = SBLayout
+            
         default:
             break
         }
         
-        let aVC = storyBoard(name: SBName, identifier: identifier)
+        let aVC = storyBoard(name: name, identifier: identifier)
         aVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(aVC, animated: true)
     }
@@ -116,3 +121,7 @@ class SJNodeCell: ASCellNode {
     }
     
 }
+
+
+private let SBDisplay = "Display"
+let SBLayout = "LayoutSpec"

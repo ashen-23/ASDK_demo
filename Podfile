@@ -8,4 +8,7 @@ target 'ASDK_demo' do
  pod 'AsyncDisplayKit'
 
  pod 'SnapKit'
+ 
+ pod 'PagingMenuController'
+
 end

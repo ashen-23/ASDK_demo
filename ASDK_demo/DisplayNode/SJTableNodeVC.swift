@@ -68,7 +68,7 @@ extension SJTableNodeVC: ASTableDelegate, ASTableDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let aTitle = grade?[section].name
-        return SJableHeaderNode(title: aTitle).view
+        return SJTableHeaderNode(title: aTitle).view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -78,6 +78,7 @@ extension SJTableNodeVC: ASTableDelegate, ASTableDataSource {
 }
 
 
+//*****************************************
 
 // table header
 class SJableHeader: ASDisplayNode {
@@ -130,6 +131,3 @@ class SJableHeader: ASDisplayNode {
         return ASRelativeLayoutSpec(horizontalPosition: .center, verticalPosition: .center, sizingOption: .minimumSize, child: stackV)
     }
 }
-
-
-//*****************************************

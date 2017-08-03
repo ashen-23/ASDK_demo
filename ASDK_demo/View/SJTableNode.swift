@@ -77,7 +77,7 @@ class SJTableNoe: ASCellNode {
 }
 
 // view header
-class SJableHeaderNode: ASDisplayNode {
+class SJTableHeaderNode: ASDisplayNode {
     
     lazy var textNode = ASTextNode()
     
@@ -88,7 +88,7 @@ class SJableHeaderNode: ASDisplayNode {
         
         addSubnode(textNode)
         
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.lightGray
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {

@@ -28,14 +28,20 @@ class SJCollectionNodeVC: UIViewController {
     
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width, height: 120)
+        //控制item 的 Size
+        //layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width / 3, height: 120)
+        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.size.width , height: 45)
         
         collectionNode = ASCollectionNode(collectionViewLayout: layout)
         
         collectionNode?.delegate = self
         collectionNode?.dataSource = self
         
+        collectionNode?.frame = SJScreenRect
         view.addSubnode(collectionNode!)
+        
+        // add view header
+        collectionNode?.registerSupplementaryNode(ofKind: UICollectionElementKindSectionHeader)
     }
     
 }
@@ -60,7 +66,40 @@ extension SJCollectionNodeVC: ASCollectionDelegate, ASCollectionDataSource {
             
             let node = SJTableNoe(person: person)
             
+            //控制item 的 Size
+            // node.style.preferredSize = CGSize(width: UIScreen.main.bounds.size.width / 3, height: 120)
+            node.style.width = ASDimensionMake(UIScreen.main.bounds.size.width) // 如果不设置宽度, 当文本不够换行时, 会整体居中
+            
             return node
         }
+    }
+    
+    // header 
+    func collectionNode(_ collectionNode: ASCollectionNode, nodeForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> ASCellNode {
+        
+        let header = grade?[indexPath.section].name
+        return HeaderNode(title: header)
+    }
+    
+}
+
+
+fileprivate class HeaderNode: ASCellNode {
+
+    lazy var textNode = ASTextNode()
+    
+    init(title: String?) {
+        super.init()
+        
+        textNode.attributedText = NSAttributedString(string: title ?? "", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18), NSForegroundColorAttributeName: UIColor.black])
+        
+        addSubnode(textNode)
+        
+        backgroundColor = UIColor.lightGray
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20), child: textNode)
     }
 }

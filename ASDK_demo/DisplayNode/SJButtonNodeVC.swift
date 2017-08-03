@@ -21,10 +21,7 @@ class SJButtonNodeVC: UIViewController {
         view.addSubnode(buttonNode)
         
     }
-    
-
 }
-
 
 
 fileprivate class SJButtonNode: ASDisplayNode {

@@ -30,6 +30,7 @@
 		95D9F6641F30805900B7BC96 /* SJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6631F30805900B7BC96 /* SJUtils.swift */; };
 		95E4B9571F34105F005FF79E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9561F34105F005FF79E /* Extensions.swift */; };
 		95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9581F344EC6005FF79E /* ControlNode.swift */; };
+		95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */; };
 		C927670E84B4984F05FA86A4 /* Pods_ASDK_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A19544D7730655E78EFA19 /* Pods_ASDK_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		95D9F6631F30805900B7BC96 /* SJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUtils.swift; sourceTree = "<group>"; };
 		95E4B9561F34105F005FF79E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95E4B9581F344EC6005FF79E /* ControlNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlNode.swift; sourceTree = "<group>"; };
+		95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJOverlaySpecVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				959932A01F33004300B4A965 /* SJLayoutSpecVC.swift */,
 				959932A31F3300D700B4A965 /* SJInsetSpecVC.swift */,
 				95A7538B1F330F5600D21896 /* SJStackSpecVC.swift */,
+				95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				95E4B9571F34105F005FF79E /* Extensions.swift in Sources */,
 				95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */,
 				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
+				95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */,
 				95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

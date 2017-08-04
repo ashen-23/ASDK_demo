@@ -99,5 +99,23 @@
             </objects>
             <point key="canvasLocation" x="1113" y="854"/>
         </scene>
+        <!--Ratio SpecVC-->
+        <scene sceneID="G6H-Ia-1e2">
+            <objects>
+                <viewController storyboardIdentifier="ratio" id="u3y-ot-C3i" customClass="SJRatioSpecVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jrc-96-JNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYI-gj-gKs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mqI-SB-Bg6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xf-fZ-p9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="854"/>
+        </scene>
     </scenes>
 </document>

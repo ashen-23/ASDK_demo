@@ -50,7 +50,7 @@ class ControlNode: ASDisplayNode {
             
             self.callback = callback
             
-            button.borderColor = SJColor(230, green: 230, blue: 230).cgColor
+            button.borderColor = SJColor(20, green: 130, blue: 240).cgColor
             button.borderWidth = 0.5
             button.contentEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
             button.addTarget(self, action: #selector(Control.doControlClick(sender:)), forControlEvents: .touchUpInside)
@@ -68,6 +68,7 @@ class ControlNode: ASDisplayNode {
             textNode.maximumNumberOfLines = 2
             textNode.style.maxWidth = ASDimensionMake(75)
             addSubnode(textNode)
+            
         }
         
         func doControlClick(sender: ASButtonNode) {

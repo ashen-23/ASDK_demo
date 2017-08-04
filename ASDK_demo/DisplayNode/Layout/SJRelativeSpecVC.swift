@@ -44,11 +44,11 @@ class SJRelativeSpecVC: UIViewController {
         
         var infos = [ControlInfo]()
         
-        infos.append(ControlInfo(title: "horizontalPos", descs: ["none", "start", "center", "end"], index: 1))
+        infos.append(ControlInfo(title: "horizontPos", descs: ["none", "start", "center", "end"], index: 1))
         
         infos.append(ControlInfo(title: "verticalPos", descs: ["none", "start", "center", "end"], index: 1))
         
-        infos.append(ControlInfo(title: "sizingOption", descs: ["minimumWidth", "minimumHeight", "minimumSize"]))
+        infos.append(ControlInfo(title: "sizingOpt", descs: ["minimumWidth", "minimumHeight", "minimumSize"]))
         
         infos.append(ControlInfo(title: "reset"))
         

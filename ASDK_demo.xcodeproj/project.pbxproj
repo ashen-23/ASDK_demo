@@ -124,9 +124,9 @@
 				959932A01F33004300B4A965 /* SJLayoutSpecVC.swift */,
 				959932A31F3300D700B4A965 /* SJInsetSpecVC.swift */,
 				95A7538B1F330F5600D21896 /* SJStackSpecVC.swift */,
-				95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */,
 				95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */,
 				95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */,
+				95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */,
 				95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */,
 			);
 			path = Layout;

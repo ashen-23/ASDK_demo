@@ -1,7 +1,7 @@
 # ASDK_demo
-This is a demo about how to use ASDK(AsyncDisplayKit / Texture)
+This is a demo about how to use ASDK(AsyncDisplayKit / Texture) [中文介绍](./ASDK_demo/Document/document_chs.md)
 
-![colleciton node](./ASDK_demo/Images/collection.gif)
+
 
 ![stack spec](./ASDK_demo/Images/stackSpec.gif)
 
@@ -32,3 +32,7 @@ This is a demo about how to use ASDK(AsyncDisplayKit / Texture)
 
 - Waiting
 
+
+
+
+![colleciton node](./ASDK_demo/Images/collection.gif)

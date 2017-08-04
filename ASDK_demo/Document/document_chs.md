@@ -12,7 +12,7 @@
   - 扩展了自动识别 ```#话题#``` 和 ```@```
 - ASButtonNode ( == UIButton)
   -  任意自定义image 和text的位置
-  - 可设置内容边距contentEdgeInsets
+  -  可设置内容边距contentEdgeInsets
 - ASTableNode ( == UITableView)
   - 显示tableHeaderView, viewForHeader, Node
   - 点击操作, 自动行高

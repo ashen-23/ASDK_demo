@@ -35,4 +35,4 @@ This is a demo about how to use ASDK(AsyncDisplayKit / Texture) [中文介绍](.
 
 
 
-![colleciton node](./ASDK_demo/Images/collection.gif)
+![colleciton node](./ASDK_demo/Images/ASDK.gif)

@@ -11,4 +11,5 @@ target 'ASDK_demo' do
  
  pod 'PagingMenuController'
 
+ pod 'SnapKit'
 end

@@ -161,11 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				95D9F6631F30805900B7BC96 /* SJUtils.swift */,
+				95AC18AA1F31E42B00097ADE /* SJClass.swift */,
+				95E4B9561F34105F005FF79E /* Extensions.swift */,
 				958E07FE1F2AD62B0078A484 /* Info.plist */,
 				958E07FB1F2AD62B0078A484 /* LaunchScreen.storyboard */,
 				958E07F91F2AD62B0078A484 /* Assets.xcassets */,
-				95AC18AA1F31E42B00097ADE /* SJClass.swift */,
-				95E4B9561F34105F005FF79E /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";

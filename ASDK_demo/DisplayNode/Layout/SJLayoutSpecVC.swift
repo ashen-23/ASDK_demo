@@ -11,8 +11,6 @@ import AsyncDisplayKit
 import PagingMenuController
 
 class SJLayoutSpecVC: UIViewController {
-
-    lazy var tableView = ASTableNode()
     
     lazy var items = ["insetSpec","stackSpec"]
     
@@ -24,6 +22,10 @@ class SJLayoutSpecVC: UIViewController {
         title = "layout Overview"
         
         configOptions()
+        
+        let aLine = UIView(frame: CGRect(x: 0, y: 115, width: UIScreen.main.bounds.size.width, height: 2))
+        aLine.backgroundColor = SJColor(230, green: 230, blue: 230)
+        view.addSubview(aLine)
     }
     
     func configOptions() {

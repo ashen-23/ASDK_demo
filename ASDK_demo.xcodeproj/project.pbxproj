@@ -33,6 +33,7 @@
 		95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */; };
 		95E4B95D1F345964005FF79E /* SJRelativeSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */; };
 		95E4B95F1F34648F005FF79E /* SJRatioSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */; };
+		95E4B9611F346BFC005FF79E /* SJAbsoluteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */; };
 		C927670E84B4984F05FA86A4 /* Pods_ASDK_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A19544D7730655E78EFA19 /* Pods_ASDK_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJOverlaySpecVC.swift; sourceTree = "<group>"; };
 		95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRelativeSpecVC.swift; sourceTree = "<group>"; };
 		95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRatioSpecVC.swift; sourceTree = "<group>"; };
+		95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAbsoluteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */,
 				95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */,
 				95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */,
+				95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				959932A41F3300D700B4A965 /* SJInsetSpecVC.swift in Sources */,
 				95AC18A71F31C6DE00097ADE /* SJTableNodeVC.swift in Sources */,
 				95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */,
+				95E4B9611F346BFC005FF79E /* SJAbsoluteVC.swift in Sources */,
 				958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */,
 				95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */,
 				95E4B95F1F34648F005FF79E /* SJRatioSpecVC.swift in Sources */,

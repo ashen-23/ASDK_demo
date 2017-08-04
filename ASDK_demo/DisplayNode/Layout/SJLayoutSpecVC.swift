@@ -12,7 +12,7 @@ import PagingMenuController
 
 class SJLayoutSpecVC: UIViewController {
     
-    lazy var items = ["inset","stack", "relative", "ratio", "overlay"]
+    lazy var items = ["inset","stack", "relative", "ratio", "overlay", "absolute"]
     
     var mPaging: PagingMenuController?
 

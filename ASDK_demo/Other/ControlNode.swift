@@ -61,6 +61,7 @@ class ControlNode: ASDisplayNode {
             
             addSubnode(button)
             
+            self.currentIndex = info.defaultIdx
             self.selects = info.descs
             textNode.attributedText = NSAttributedString(string: selects[currentIndex], attributes: defaultAttri())
             textNode.style.flexShrink = 1
@@ -93,6 +94,15 @@ struct ControlInfo {
     
     var title: String
     var descs: [String]
+    
+    var defaultIdx = 0
+    
+    init(title: String, descs: [String], index: Int) {
+        
+        self.title = title
+        self.descs = descs
+        self.defaultIdx = index
+    }
     
     init(title: String, descs: [String]) {
         

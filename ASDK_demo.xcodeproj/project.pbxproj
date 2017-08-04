@@ -29,6 +29,7 @@
 		95D9F6621F30803600B7BC96 /* Display.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9F6611F30803600B7BC96 /* Display.storyboard */; };
 		95D9F6641F30805900B7BC96 /* SJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6631F30805900B7BC96 /* SJUtils.swift */; };
 		95E4B9571F34105F005FF79E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9561F34105F005FF79E /* Extensions.swift */; };
+		95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9581F344EC6005FF79E /* ControlNode.swift */; };
 		C927670E84B4984F05FA86A4 /* Pods_ASDK_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A19544D7730655E78EFA19 /* Pods_ASDK_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		95D9F6611F30803600B7BC96 /* Display.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Display.storyboard; sourceTree = "<group>"; };
 		95D9F6631F30805900B7BC96 /* SJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUtils.swift; sourceTree = "<group>"; };
 		95E4B9561F34105F005FF79E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		95E4B9581F344EC6005FF79E /* ControlNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				95D9F6631F30805900B7BC96 /* SJUtils.swift */,
 				95AC18AA1F31E42B00097ADE /* SJClass.swift */,
 				95E4B9561F34105F005FF79E /* Extensions.swift */,
+				95E4B9581F344EC6005FF79E /* ControlNode.swift */,
 				958E07FE1F2AD62B0078A484 /* Info.plist */,
 				958E07FB1F2AD62B0078A484 /* LaunchScreen.storyboard */,
 				958E07F91F2AD62B0078A484 /* Assets.xcassets */,
@@ -331,6 +334,7 @@
 				95E4B9571F34105F005FF79E /* Extensions.swift in Sources */,
 				95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */,
 				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
+				95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,4 +54,4 @@ func randomName(length: Int = 7) -> String {
 }
 
 let SJScreenRect = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64)
-let SJPagingRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64 - 54)
+let SJPagingRect = CGRect(x: 0, y: 4, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - 64 - 54)

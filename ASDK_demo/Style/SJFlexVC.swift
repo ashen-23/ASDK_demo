@@ -18,13 +18,23 @@ class SJFlexVC: UIViewController {
         
         // flexGrow
         let aNode = FlexGrowNode()
-        aNode.frame = CGRect(x: 0, y: 4, width: UIScreen.main.bounds.size.width, height: 60)
+        aNode.frame = CGRect(x: 0, y: 4, width: UIScreen.main.bounds.size.width, height: 50)
         self.view.addSubnode(aNode)
         
         // flexShrink
         let aNode2 = FlexShrinkNode()
-        aNode2.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 60)
+        aNode2.frame = CGRect(x: 0, y: 54, width: UIScreen.main.bounds.size.width, height: 50)
         self.view.addSubnode(aNode2)
+        
+        // ratio
+        let aNode3 = FlexRatioNode()
+        aNode3.frame = CGRect(x: 0, y: 104, width: UIScreen.main.bounds.size.width, height: 50)
+        self.view.addSubnode(aNode3)
+        
+        //
+        let aNode4 = StyleFlexNode()
+        aNode4.frame = CGRect(x: 0, y: 154, width: UIScreen.main.bounds.size.width, height: 50)
+        self.view.addSubnode(aNode4)
     }
 
 }
@@ -32,6 +42,7 @@ class SJFlexVC: UIViewController {
 //1 grow 充满
 //2 shrink 换行
 //3 ratio 按比例拉伸
+//递进
 fileprivate class StyleFlexNode: ASDisplayNode {
 
     let flexNode = FlexGrowNode()
@@ -40,13 +51,16 @@ fileprivate class StyleFlexNode: ASDisplayNode {
         super.init()
         
         addSubnode(flexNode)
+        
+        // 不设置, subnode的flexGrow不生效
+        flexNode.style.flexGrow = 1
+        self.style.flexGrow = 1
+
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
-        let stack = ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .start, children: [flexNode])
-        
-        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20), child: stack)
+        return ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .start, children: [flexNode])
     }
     
 }
@@ -71,7 +85,7 @@ fileprivate class FlexGrowNode: ASDisplayNode {
         addSubnode(dsp1)
         addSubnode(dsp2)
         
-        flexNode.style.height = ASDimensionMake(20)
+        flexNode.style.preferredSize = CGSize(width: 0, height: 25) // 防止控制台警告
         flexNode.style.flexGrow = 1
         flexNode.backgroundColor = UIColor.cyan
         addSubnode(flexNode)
@@ -106,5 +120,45 @@ fileprivate class FlexShrinkNode: ASDisplayNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
         return ASStackLayoutSpec(direction: .horizontal, spacing: 15, justifyContent: .start, alignItems: .start, children: [dsp1, flexNode])
+    }
+}
+
+// ratio
+fileprivate class FlexRatioNode: ASDisplayNode {
+    
+    lazy var dsp1 = ASDisplayNode()
+    lazy var dsp2 = ASDisplayNode()
+
+    lazy var flexNode1 = ASDisplayNode()
+    lazy var flexNode2 = ASDisplayNode()
+
+    override init() {
+        super.init()
+        
+        dsp1.backgroundColor = UIColor.purple
+        dsp2.backgroundColor = UIColor.brown
+        
+        dsp1.style.preferredSize = CGSize(width: 50, height: 30)
+        dsp2.style.preferredSize = CGSize(width: 50, height: 30)
+        
+        addSubnode(dsp1)
+        addSubnode(dsp2)
+        
+        // flexShrink 同理
+        
+        flexNode1.style.preferredSize = CGSize(width: 0, height: 25) // 防止控制台警告
+        flexNode1.style.flexGrow = 1
+        flexNode1.backgroundColor = UIColor.cyan
+        addSubnode(flexNode1)
+        
+        flexNode2.style.preferredSize = CGSize(width: 0, height: 25) // 防止控制台警告
+        flexNode2.style.flexGrow = 2
+        flexNode2.backgroundColor = UIColor.cyan
+        addSubnode(flexNode2)
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        return ASStackLayoutSpec(direction: .horizontal, spacing: 15, justifyContent: .start, alignItems: .start, children: [dsp1, flexNode1, dsp2, flexNode2])
     }
 }

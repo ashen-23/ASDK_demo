@@ -10,7 +10,7 @@ import UIKit
 import AsyncDisplayKit
 import SnapKit
 
-class SJNodeVC: UIViewController {
+class SJOverviewVC: UIViewController {
 
     lazy var tableView = ASTableNode()
     
@@ -38,7 +38,7 @@ class SJNodeVC: UIViewController {
 
 }
 
-extension SJNodeVC: ASTableDelegate, ASTableDataSource {
+extension SJOverviewVC: ASTableDelegate, ASTableDataSource {
 
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         return titles.count
@@ -58,51 +58,26 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
 
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
-        var identifier = "imageNode"
-        var name = SBNode
+        var aVC: UIViewController
         
         switch indexPath.row {
         case 0:
             
-            let aVC = SJNodeViewVC()
-            aVC.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(aVC, animated: true)
-            return
-            name = SBNode
-            identifier = "imageNode"
-        
+             aVC = SJNodeViewVC()
         case 1:
 
-            name = SBLayout
-            identifier = "textNode"
-        
-        case 2:
-            
-            identifier = "buttonNode"
-            
-        case 3:
-            identifier = "tableNode"
-            
-        case 4:
-            
-            identifier = "collectionNode"
-            
-        case 5:
-            
-            identifier = "layoutSpec"
-            name = SBLayout
+            aVC = SJLayoutSpecVC()
             
         default:
-            break
+            
+            aVC = UIViewController()
         }
         
-        let aVC = storyBoard(name: name, identifier: identifier)
         aVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(aVC, animated: true)
     }
     
 }
-
 
 
 //***************************************************

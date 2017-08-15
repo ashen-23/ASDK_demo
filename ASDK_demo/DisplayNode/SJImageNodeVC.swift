@@ -18,10 +18,9 @@ class SJImageNodeVC: UIViewController {
         
         let aNode = SJImageNode()
         
-        aNode.frame = SJScreenRect
+        aNode.frame = SJPagingRect
         
         self.view.addSubnode(aNode)        
-
     }
 
 }

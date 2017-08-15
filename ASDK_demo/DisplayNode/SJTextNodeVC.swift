@@ -20,7 +20,7 @@ class SJTextNodeVC: UIViewController {
 
         textNode = SJTextDisplay(delegate: self)
         
-        textNode?.frame = SJScreenRect
+        textNode?.frame = SJPagingRect
         view.addSubnode(textNode!)
         
     }

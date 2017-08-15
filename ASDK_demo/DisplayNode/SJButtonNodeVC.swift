@@ -16,7 +16,7 @@ class SJButtonNodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonNode.frame = SJScreenRect
+        buttonNode.frame = SJPagingRect
         
         view.addSubnode(buttonNode)
         

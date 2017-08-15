@@ -25,9 +25,6 @@ class SJMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let aLine = UIView(frame: CGRect(x: 0, y: 115, width: UIScreen.main.bounds.size.width, height: 2))
-        aLine.backgroundColor = SJColor(230, green: 230, blue: 230)
-        view.addSubview(aLine)
     }
     
     func configOptions() {
@@ -45,6 +42,11 @@ class SJMenuVC: UIViewController {
         
         mPaging = PagingMenuController(options: aOption)
         addPaging()
+        
+        let aLine = UIView(frame: CGRect(x: 0, y: 115, width: UIScreen.main.bounds.size.width, height: 2))
+        aLine.backgroundColor = SJColor(230, green: 230, blue: 230)
+        view.addSubview(aLine)
+        
     }
     
     // 添加控制器

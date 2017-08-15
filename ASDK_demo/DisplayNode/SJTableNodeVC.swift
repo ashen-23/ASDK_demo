@@ -22,7 +22,6 @@ class SJTableNodeVC: UIViewController {
 
         configTable()        
     }
-
     
     func configTable() {
     

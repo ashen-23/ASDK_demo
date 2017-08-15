@@ -26,7 +26,7 @@
 		95AC18AB1F31E42B00097ADE /* SJClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18AA1F31E42B00097ADE /* SJClass.swift */; };
 		95AC18AD1F31E45E00097ADE /* SJTableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18AC1F31E45E00097ADE /* SJTableNode.swift */; };
 		95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */; };
-		95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */; };
+		95D9F65C1F3079CB00B7BC96 /* SJOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65B1F3079CB00B7BC96 /* SJOverviewVC.swift */; };
 		95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */; };
 		95D9F6621F30803600B7BC96 /* Display.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9F6611F30803600B7BC96 /* Display.storyboard */; };
 		95D9F6641F30805900B7BC96 /* SJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6631F30805900B7BC96 /* SJUtils.swift */; };
@@ -64,7 +64,7 @@
 		95AC18AA1F31E42B00097ADE /* SJClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJClass.swift; sourceTree = "<group>"; };
 		95AC18AC1F31E45E00097ADE /* SJTableNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTableNode.swift; sourceTree = "<group>"; };
 		95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTabBarVC.swift; sourceTree = "<group>"; };
-		95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJNodeVC.swift; path = DisplayNode/SJNodeVC.swift; sourceTree = "<group>"; };
+		95D9F65B1F3079CB00B7BC96 /* SJOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJOverviewVC.swift; path = DisplayNode/SJOverviewVC.swift; sourceTree = "<group>"; };
 		95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJImageNodeVC.swift; sourceTree = "<group>"; };
 		95D9F6611F30803600B7BC96 /* Display.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Display.storyboard; sourceTree = "<group>"; };
 		95D9F6631F30805900B7BC96 /* SJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUtils.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				958E07F21F2AD62B0078A484 /* AppDelegate.swift */,
 				958E07F61F2AD62B0078A484 /* Main.storyboard */,
 				95D9F6591F3078B400B7BC96 /* SJTabBarVC.swift */,
-				95D9F65B1F3079CB00B7BC96 /* SJNodeVC.swift */,
+				95D9F65B1F3079CB00B7BC96 /* SJOverviewVC.swift */,
 				9579805B1F4316AF0063B7C1 /* SJMenuVC.swift */,
 			);
 			path = ASDK_demo;
@@ -338,7 +338,7 @@
 				95AC18AD1F31E45E00097ADE /* SJTableNode.swift in Sources */,
 				959932A41F3300D700B4A965 /* SJInsetSpecVC.swift in Sources */,
 				95AC18A71F31C6DE00097ADE /* SJTableNodeVC.swift in Sources */,
-				95D9F65C1F3079CB00B7BC96 /* SJNodeVC.swift in Sources */,
+				95D9F65C1F3079CB00B7BC96 /* SJOverviewVC.swift in Sources */,
 				95E4B9611F346BFC005FF79E /* SJAbsoluteVC.swift in Sources */,
 				958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */,
 				95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */,

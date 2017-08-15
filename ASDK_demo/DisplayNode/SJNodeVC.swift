@@ -14,7 +14,8 @@ class SJNodeVC: UIViewController {
 
     lazy var tableView = ASTableNode()
     
-    lazy var titles = ["image", "text", "button", "table", "collection", "layout examples"]
+    // "image", "text", "button", "table", "collection"
+    lazy var titles = ["Node", "layout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +59,21 @@ extension SJNodeVC: ASTableDelegate, ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         
         var identifier = "imageNode"
-        var name = SBDisplay
+        var name = SBNode
         
         switch indexPath.row {
         case 0:
             
+            let aVC = SJNodeViewVC()
+            aVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(aVC, animated: true)
+            return
+            name = SBNode
             identifier = "imageNode"
         
         case 1:
 
+            name = SBLayout
             identifier = "textNode"
         
         case 2:
@@ -123,5 +130,5 @@ class SJNodeCell: ASCellNode {
 }
 
 
-private let SBDisplay = "Display"
+private let SBNode = "Display"
 let SBLayout = "LayoutSpec"

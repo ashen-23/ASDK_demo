@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A315i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Iy-Mk-QJe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A330h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Image NodeVC-->
         <scene sceneID="vv7-rx-rt4">
             <objects>
-                <viewController storyboardIdentifier="imageNode" id="eVI-Hl-qIA" customClass="SJImageNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="image" id="eVI-Hl-qIA" customClass="SJImageNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oDX-9l-GhI"/>
                         <viewControllerLayoutGuide type="bottom" id="NgH-kZ-uFW"/>
@@ -31,7 +31,7 @@
         <!--Text NodeVC-->
         <scene sceneID="MIW-p5-Fpg">
             <objects>
-                <viewController storyboardIdentifier="textNode" id="uZV-qh-vMG" customClass="SJTextNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="text" id="uZV-qh-vMG" customClass="SJTextNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pae-8M-Rc5"/>
                         <viewControllerLayoutGuide type="bottom" id="RVZ-R1-fp5"/>
@@ -49,7 +49,7 @@
         <!--Table NodeVC-->
         <scene sceneID="bxS-Lg-w0q">
             <objects>
-                <viewController storyboardIdentifier="tableNode" id="hKG-RE-8F6" customClass="SJTableNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="table" id="hKG-RE-8F6" customClass="SJTableNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ml2-RK-ZQk"/>
                         <viewControllerLayoutGuide type="bottom" id="7N9-zZ-8iN"/>
@@ -67,7 +67,7 @@
         <!--Button NodeVC-->
         <scene sceneID="siN-v9-3Ss">
             <objects>
-                <viewController storyboardIdentifier="buttonNode" id="RIa-CS-0em" customClass="SJButtonNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="button" id="RIa-CS-0em" customClass="SJButtonNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="22W-fc-m45"/>
                         <viewControllerLayoutGuide type="bottom" id="G73-bq-MP7"/>
@@ -85,7 +85,7 @@
         <!--Collection NodeVC-->
         <scene sceneID="MOM-yM-abh">
             <objects>
-                <viewController storyboardIdentifier="collectionNode" id="OGd-SM-F5Z" customClass="SJCollectionNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="collection" id="OGd-SM-F5Z" customClass="SJCollectionNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U8M-h6-pm7"/>
                         <viewControllerLayoutGuide type="bottom" id="Eci-jm-2r8"/>
@@ -99,24 +99,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRw-Xt-nIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1905" y="880"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="COl-Dz-6JL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Iy-Mk-QJe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cIV-2k-kTr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eVI-Hl-qIA" kind="relationship" relationship="rootViewController" id="REw-4c-xih"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R0B-ca-fx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="163.26836581709148"/>
         </scene>
     </scenes>
 </document>

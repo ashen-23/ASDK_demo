@@ -107,41 +107,6 @@ class SJTextNode: ASTextNode {
         }
         
         self.attributedText = attriStr
-        
-        /*
-        let pattern = patterns?.first ?? SJLinkStyle.topic.pattern()
-        
-        var result: String = text
-        
-        var ranges = [NSRange]()
-        
-        let control = noSignal(pattern: pattern, range: range, source: result)
-        
-        result = control.0
-        ranges.append(contentsOf: control.1)
-        
-        let matches = NSMutableAttributedString(string: result, attributes: SJTextNodeConfig.normalAttri())
-        for range in ranges {
-        
-            let title = (result as NSString).substring(with: range)
-            matches.addAttributes(SJTextNodeConfig.highlightAttri(style: pattern.type, title: title), range: range)
-        }
-        
-        
-        self.attributedText = matches
- */
-
-        /*
-        patterns?.forEach { [weak self] in
-        
-            guard let aSelf = self else { return }
-            let control = aSelf.noSignal(pattern: $0, range: range, source: result)
-            
-            result = control.0
-            ranges.append(contentsOf: control.1)
-        }
-    */
-
     }
     
     fileprivate func convert(range: NSRange, pattern: SJTextRegular, index: Int) -> NSRange {
@@ -175,7 +140,6 @@ class SJTextNode: ASTextNode {
         }
         
         return matchKey
-
     }
     
     
@@ -193,32 +157,7 @@ class SJTextNode: ASTextNode {
             self.pattern = pattern
         }
     }
-    
-    
-    /*
-    fileprivate func noSignal(pattern: SJTextRegular, range: NSRange, source: String) -> (String, [NSRange]) {
-        let regular = try! NSRegularExpression(pattern: pattern.pattern, options: .caseInsensitive)
-        let result = regular.matches(in: source, options: .reportCompletion, range: range)
-        let length = result.count - 1
-        
-        var ranges = [NSRange]()
-        var reduceText = source
-        
-        for i in 0...length {
-            
-            let aRange = result[length - i].range
-            ranges.append(convert(range: aRange, pattern: pattern, index: length - i))
-            
-            let endRange = NSRange(location: aRange.location + aRange.length - pattern.endLength(), length: pattern.endLength())
-            reduceText = (reduceText as NSString).replacingCharacters(in: endRange, with: "")
-            
-            let startRange = NSRange(location: aRange.location, length: pattern.endLength())
-            reduceText = (reduceText as NSString).replacingCharacters(in: startRange, with: "")
-        }
-        
-        return (reduceText, ranges)
-    }
- */
+
 }
 
 extension SJTextNode: ASTextNodeDelegate {
@@ -231,7 +170,7 @@ extension SJTextNode: ASTextNodeDelegate {
         
         guard let clickStr = value as? String, let type = SJLinkStyle(rawValue: attribute) else { return }
         
-        self.view.makeToast(type.rawValue + "   :" + clickStr)
+        self.view.makeToast(type.rawValue + ":  " + clickStr)
 
     }
 }

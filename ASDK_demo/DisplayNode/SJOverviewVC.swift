@@ -15,7 +15,7 @@ class SJOverviewVC: UIViewController {
     lazy var tableView = ASTableNode()
     
     // "image", "text", "button", "table", "collection"
-    lazy var titles = ["Node", "layout"]
+    lazy var titles = ["Node", "layout", "style tip"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +67,10 @@ extension SJOverviewVC: ASTableDelegate, ASTableDataSource {
         case 1:
 
             aVC = SJLayoutSpecVC()
+        
+        case 2:
+            
+            aVC = SJStyleOverviewVC()
             
         default:
             

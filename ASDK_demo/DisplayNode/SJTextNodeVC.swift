@@ -138,4 +138,4 @@ fileprivate class SJTextDisplay: ASDisplayNode {
 
 
 
-private let displayStr = "Lorem ipsum @dolor sit er elit, @consectetaur cillium #adipisicing# pecu, @sed do #eius@mod tempor# incididunt magna aliqua. Ut enim ad #minim veniam#, nisi ut aliquip ex ea commodo consequat.点我跳转 Duis aute irure dolor in reprehenderit in voluptate velit esse #cillum dolore# eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, Nam @liber te conscient to factor tum poen legum odioque civiuda."
+let displayStr = "Lorem ipsum @dolor sit er elit, @consectetaur cillium #adipisicing# pecu, @sed do #eius@mod tempor# incididunt magna aliqua. Ut enim ad #minim veniam#, nisi ut aliquip ex ea commodo consequat.点我跳转 Duis aute irure dolor in reprehenderit in voluptate velit esse #cillum dolore# eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, Nam @liber te conscient to factor tum poen legum odioque civiuda."

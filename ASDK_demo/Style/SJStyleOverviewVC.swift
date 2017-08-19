@@ -14,7 +14,7 @@ class SJStyleOverviewVC: SJMenuVC {
         super.viewDidLoad()
         
         SBName = "Style"
-        items = ["flex"]
+        items = ["flex", "size"]
         //items = ["flex", "text", "button", "table", "collection"]
     }
 

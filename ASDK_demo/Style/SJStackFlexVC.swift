@@ -9,7 +9,7 @@
 import UIKit
 import AsyncDisplayKit
 
-class SJFlexVC: UIViewController {
+class SJStackFlexVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@
 		9579805E1F4317AD0063B7C1 /* SJNodeViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579805D1F4317AD0063B7C1 /* SJNodeViewVC.swift */; };
 		957980611F431BCA0063B7C1 /* SJStyleOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957980601F431BCA0063B7C1 /* SJStyleOverviewVC.swift */; };
 		957980631F431BE70063B7C1 /* Style.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957980621F431BE70063B7C1 /* Style.storyboard */; };
-		957980651F431C100063B7C1 /* SJFlexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957980641F431C100063B7C1 /* SJFlexVC.swift */; };
+		957980651F431C100063B7C1 /* SJStackFlexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957980641F431C100063B7C1 /* SJStackFlexVC.swift */; };
 		958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E07F21F2AD62B0078A484 /* AppDelegate.swift */; };
 		958E07F81F2AD62B0078A484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F61F2AD62B0078A484 /* Main.storyboard */; };
 		958E07FA1F2AD62B0078A484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F91F2AD62B0078A484 /* Assets.xcassets */; };
@@ -33,6 +33,7 @@
 		95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */; };
 		95D9F6621F30803600B7BC96 /* Display.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9F6611F30803600B7BC96 /* Display.storyboard */; };
 		95D9F6641F30805900B7BC96 /* SJUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9F6631F30805900B7BC96 /* SJUtils.swift */; };
+		95DF83EF1F47FB270089D0C7 /* SJStyleSizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF83EE1F47FB270089D0C7 /* SJStyleSizeVC.swift */; };
 		95E4B9571F34105F005FF79E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9561F34105F005FF79E /* Extensions.swift */; };
 		95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9581F344EC6005FF79E /* ControlNode.swift */; };
 		95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */; };
@@ -50,7 +51,7 @@
 		9579805D1F4317AD0063B7C1 /* SJNodeViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJNodeViewVC.swift; sourceTree = "<group>"; };
 		957980601F431BCA0063B7C1 /* SJStyleOverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStyleOverviewVC.swift; sourceTree = "<group>"; };
 		957980621F431BE70063B7C1 /* Style.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Style.storyboard; sourceTree = "<group>"; };
-		957980641F431C100063B7C1 /* SJFlexVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJFlexVC.swift; sourceTree = "<group>"; };
+		957980641F431C100063B7C1 /* SJStackFlexVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStackFlexVC.swift; sourceTree = "<group>"; };
 		958E07EF1F2AD62B0078A484 /* ASDK_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASDK_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958E07F21F2AD62B0078A484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958E07F71F2AD62B0078A484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJImageNodeVC.swift; sourceTree = "<group>"; };
 		95D9F6611F30803600B7BC96 /* Display.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Display.storyboard; sourceTree = "<group>"; };
 		95D9F6631F30805900B7BC96 /* SJUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJUtils.swift; sourceTree = "<group>"; };
+		95DF83EE1F47FB270089D0C7 /* SJStyleSizeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStyleSizeVC.swift; sourceTree = "<group>"; };
 		95E4B9561F34105F005FF79E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95E4B9581F344EC6005FF79E /* ControlNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlNode.swift; sourceTree = "<group>"; };
 		95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJOverlaySpecVC.swift; path = ../DisplayNode/Layout/SJOverlaySpecVC.swift; sourceTree = "<group>"; };
@@ -99,7 +101,8 @@
 			children = (
 				957980621F431BE70063B7C1 /* Style.storyboard */,
 				957980601F431BCA0063B7C1 /* SJStyleOverviewVC.swift */,
-				957980641F431C100063B7C1 /* SJFlexVC.swift */,
+				957980641F431C100063B7C1 /* SJStackFlexVC.swift */,
+				95DF83EE1F47FB270089D0C7 /* SJStyleSizeVC.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -353,7 +356,7 @@
 				95A7538C1F330F5600D21896 /* SJStackSpecVC.swift in Sources */,
 				95AC18A31F31797200097ADE /* SJTextNode.swift in Sources */,
 				959932A21F33004300B4A965 /* SJLayoutSpecVC.swift in Sources */,
-				957980651F431C100063B7C1 /* SJFlexVC.swift in Sources */,
+				957980651F431C100063B7C1 /* SJStackFlexVC.swift in Sources */,
 				95AC18AD1F31E45E00097ADE /* SJTableNode.swift in Sources */,
 				959932A41F3300D700B4A965 /* SJInsetSpecVC.swift in Sources */,
 				95AC18A71F31C6DE00097ADE /* SJTableNodeVC.swift in Sources */,
@@ -368,6 +371,7 @@
 				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
 				9579805E1F4317AD0063B7C1 /* SJNodeViewVC.swift in Sources */,
 				957980611F431BCA0063B7C1 /* SJStyleOverviewVC.swift in Sources */,
+				95DF83EF1F47FB270089D0C7 /* SJStyleSizeVC.swift in Sources */,
 				95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */,
 				95E4B95D1F345964005FF79E /* SJRelativeSpecVC.swift in Sources */,
 				95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */,

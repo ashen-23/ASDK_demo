@@ -31,10 +31,6 @@ class SJFlexVC: UIViewController {
         aNode3.frame = CGRect(x: 0, y: 104, width: UIScreen.main.bounds.size.width, height: 50)
         self.view.addSubnode(aNode3)
         
-        //
-        let aNode4 = StyleFlexNode()
-        aNode4.frame = CGRect(x: 0, y: 154, width: UIScreen.main.bounds.size.width, height: 50)
-        self.view.addSubnode(aNode4)
     }
 
 }
@@ -43,27 +39,7 @@ class SJFlexVC: UIViewController {
 //2 shrink 换行
 //3 ratio 按比例拉伸
 //递进
-fileprivate class StyleFlexNode: ASDisplayNode {
 
-    let flexNode = FlexGrowNode()
-    
-    override init() {
-        super.init()
-        
-        addSubnode(flexNode)
-        
-        // 不设置, subnode的flexGrow不生效
-        flexNode.style.flexGrow = 1
-        self.style.flexGrow = 1
-
-    }
-    
-    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        
-        return ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .start, alignItems: .start, children: [flexNode])
-    }
-    
-}
 
 // grow
 fileprivate class FlexGrowNode: ASDisplayNode {
@@ -78,10 +54,8 @@ fileprivate class FlexGrowNode: ASDisplayNode {
         
         dsp1.backgroundColor = UIColor.purple
         dsp2.backgroundColor = UIColor.brown
-        
         dsp1.style.preferredSize = CGSize(width: 50, height: 30)
         dsp2.style.preferredSize = CGSize(width: 50, height: 30)
-
         addSubnode(dsp1)
         addSubnode(dsp2)
         

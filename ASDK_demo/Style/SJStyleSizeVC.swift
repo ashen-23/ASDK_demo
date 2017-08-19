@@ -28,9 +28,12 @@ fileprivate class StyleSizeNode: ASDisplayNode {
     var node1 = ASDisplayNode()
     
     var node2 = ASDisplayNode()
-    
 
     var node3 = ASTextNode()
+    
+    var node4 = ASTextNode()
+
+    var node5 = ASTextNode()
     
     override init() {
         super.init()
@@ -41,9 +44,12 @@ fileprivate class StyleSizeNode: ASDisplayNode {
         
         node2.style.preferredSize = CGSize(width: 100, height: 50)
         
-        node3.style.maxWidth = ASDimensionMake(200)
-       // node3.style.maxHeight = ASDimensionMake(60)
+        node3.style.maxWidth = ASDimensionMake(300)
+       // node3.style.maxHeight = ASDimensionMake(50)
         
+        node4.style.maxSize = CGSize(width: 300, height: 50)
+        
+        //
         node1.backgroundColor = UIColor.purple
         addSubnode(node1)
         
@@ -52,10 +58,16 @@ fileprivate class StyleSizeNode: ASDisplayNode {
         
         node3.attributedText = NSAttributedString(string: displayStr, attributes: defaultAttri())
         addSubnode(node3)
+        
+        node4.attributedText = NSAttributedString(string: displayStr, attributes: defaultAttri())
+        addSubnode(node4)
+        
+        node5.attributedText = NSAttributedString(string: displayStr, attributes: defaultAttri())
+        addSubnode(node5)
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
-        return ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .start, alignItems: .start, children: [node1, node2, node3])
+        return ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .start, alignItems: .start, children: [node1, node2, node3, node4, node5])
     }
 }

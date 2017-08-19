@@ -93,26 +93,90 @@ talk is cheap, show me the code
 
    ```swift
    // 使用
-	SJTextNode(text: "本期的话题是#话题#") // 可点击带着符号
-	SJTextNode(text: "本期的话题是#话题#", displaySignal: false) // 可点击且隐藏符号
-	// 自定义匹配规则
-	regular = SJTextRegular(type: self, start: "#", end: "#")
+   SJTextNode(text: "本期的话题是#话题#") // 可点击带着符号
+   SJTextNode(text: "本期的话题是#话题#", displaySignal: false) // 可点击且隐藏符号
+   // 自定义匹配规则
+   regular = SJTextRegular(type: SJLinkStyle.custom, start: "#", end: "#")
    ```
 
-- ASButtonNode ( == UIButton)
-  -  任意自定义image 和text的位置
-  -  可设置内容边距contentEdgeInsets
+- ASButtonNode (UIButton)
+  -  使用和UIButton类似
 
-- ASTableNode ( == UITableView)
-  - 显示tableHeaderView, viewForHeader, Node
-  - 点击操作, 自动行高
-  - 自动加载更多数据
+  - 特殊属性
 
-- ASCollectionNode( == UICollectionView)
+     ```swift
+     // 内容 padding
+     btnNode1.contentEdgeInsets = UIEdgeInsets.zero
+
+     // 图右文左
+     btnNode2.imageAlignment = .end
+
+     // 图上文下
+     btnNode3.laysOutHorizontally = false
+
+     // 图下文上
+     btnNode4.laysOutHorizontally = false
+     btnNode4.imageAlignment = .end
+
+     // 图文顶部对齐
+     btnNode5.contentVerticalAlignment = .top
+     ```
+
+- ASTableNode (UITableView)
+  - delegate，dataSource设置和UITableView类似
+
+    ```swift
+    extension SJTableNodeVC: ASTableDelegate, ASTableDataSource {
+
+      func numberOfSections(in tableNode: ASTableNode) -> Int {
+          return grade?.count ?? 0
+      }
+
+      func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+          return grade?[section].persons.count ?? 0
+      }
+
+      func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+
+          let person = grade?[indexPath.section].persons[indexPath.row]
+          return {
+              return SJTableNoe(person: person)
+          }
+      }
+    }
+    ```
+
+  - 设置UITableView相关属性
+    ```swift
+    // 通过tableNode.view获取ASTableView(继承自UITableView)
+    // tableHeader tableFooter
+    tableNode.view.tableHeaderView = UIView()
+    tableNode.view.tableHeaderView = node.view
+    tableNode.view.tableFooterView = UIView()
+
+    // 设置其他属性
+    tableNode?.view.separatorColor = 
+    tableNode?.view.visibleCells = 
+    ```
+
+- ASCollectionNode(UICollectionView)
   - Node, NodeSupplementary
   - Node size
   - 自动加载更多数据
-
+    ```swift
+    // delegat 中
+    func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+        
+        context.beginBatchFetching()
+        
+        let newRows = SJClass(rows: 30)
+        DispatchQueue.main.async {
+            self.view.makeToast("刷新一组新数据,共\(newRows.persons.count)条")
+            self.insertRows(data: newRows)
+            context.completeBatchFetching(true)
+        }
+    }
+    ```
 
 
 ### Layout

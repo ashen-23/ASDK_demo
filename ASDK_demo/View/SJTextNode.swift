@@ -12,6 +12,7 @@ import AsyncDisplayKit
 enum SJLinkStyle: String {
     case atPerson = "atPerson"
     case topic = "topic"
+    //case custom = "custom"
     
     static func getNames() -> [String] {
     

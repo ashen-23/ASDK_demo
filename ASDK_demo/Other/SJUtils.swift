@@ -21,7 +21,11 @@ func storyBoard(name: String, identifier: String? = nil) -> UIViewController {
 
 func defaultAttri() -> [String: Any] {
 
-    return [NSFontAttributeName: UIFont.systemFont(ofSize: 16), NSForegroundColorAttributeName: UIColor.black]
+    let aStyle = NSMutableParagraphStyle()
+    aStyle.lineSpacing = 5
+    aStyle.alignment = .center
+    
+    return [NSFontAttributeName: UIFont.systemFont(ofSize: 16), NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: aStyle]
 }
 
 func SJColor(_ red:CGFloat,green:CGFloat,blue:CGFloat,alpha:CGFloat = 1.0) ->UIColor

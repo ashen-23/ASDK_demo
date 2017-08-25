@@ -14,7 +14,7 @@ class SJNodeViewVC: SJMenuVC {
         super.viewDidLoad()
 
         SBName = "Display"
-        items = ["image", "text", "button", "table", "collection"]
+        items = ["node", "image", "text", "button", "table", "collection"]
     }
 
 }

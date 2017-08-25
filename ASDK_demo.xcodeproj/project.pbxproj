@@ -18,10 +18,6 @@
 		958E07F81F2AD62B0078A484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F61F2AD62B0078A484 /* Main.storyboard */; };
 		958E07FA1F2AD62B0078A484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958E07F91F2AD62B0078A484 /* Assets.xcassets */; };
 		958E07FD1F2AD62B0078A484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958E07FB1F2AD62B0078A484 /* LaunchScreen.storyboard */; };
-		959932A11F33004300B4A965 /* LayoutSpec.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9599329F1F33004300B4A965 /* LayoutSpec.storyboard */; };
-		959932A21F33004300B4A965 /* SJLayoutSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959932A01F33004300B4A965 /* SJLayoutSpecVC.swift */; };
-		959932A41F3300D700B4A965 /* SJInsetSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959932A31F3300D700B4A965 /* SJInsetSpecVC.swift */; };
-		95A7538C1F330F5600D21896 /* SJStackSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7538B1F330F5600D21896 /* SJStackSpecVC.swift */; };
 		95AC189E1F3175AE00097ADE /* SJTextNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */; };
 		95AC18A11F31795F00097ADE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A01F31795F00097ADE /* Toast.swift */; };
 		95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */; };
@@ -37,11 +33,16 @@
 		95DF83EF1F47FB270089D0C7 /* SJStyleSizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF83EE1F47FB270089D0C7 /* SJStyleSizeVC.swift */; };
 		95E4B9571F34105F005FF79E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9561F34105F005FF79E /* Extensions.swift */; };
 		95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9581F344EC6005FF79E /* ControlNode.swift */; };
-		95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */; };
-		95E4B95D1F345964005FF79E /* SJRelativeSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */; };
-		95E4B95F1F34648F005FF79E /* SJRatioSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */; };
-		95E4B9611F346BFC005FF79E /* SJAbsoluteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */; };
 		C927670E84B4984F05FA86A4 /* Pods_ASDK_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A19544D7730655E78EFA19 /* Pods_ASDK_demo.framework */; };
+		DA51E2551F509038003A81F3 /* LayoutSpec.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA51E24D1F509038003A81F3 /* LayoutSpec.storyboard */; };
+		DA51E2561F509038003A81F3 /* SJAbsoluteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E24E1F509038003A81F3 /* SJAbsoluteVC.swift */; };
+		DA51E2571F509038003A81F3 /* SJInsetSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E24F1F509038003A81F3 /* SJInsetSpecVC.swift */; };
+		DA51E2581F509038003A81F3 /* SJLayoutSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E2501F509038003A81F3 /* SJLayoutSpecVC.swift */; };
+		DA51E2591F509038003A81F3 /* SJOverlaySpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E2511F509038003A81F3 /* SJOverlaySpecVC.swift */; };
+		DA51E25A1F509038003A81F3 /* SJRatioSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E2521F509038003A81F3 /* SJRatioSpecVC.swift */; };
+		DA51E25B1F509038003A81F3 /* SJRelativeSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E2531F509038003A81F3 /* SJRelativeSpecVC.swift */; };
+		DA51E25C1F509038003A81F3 /* SJStackSpecVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E2541F509038003A81F3 /* SJStackSpecVC.swift */; };
+		DA51E25E1F509083003A81F3 /* SJDisplayNodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51E25D1F509083003A81F3 /* SJDisplayNodeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,10 +62,6 @@
 		958E07F91F2AD62B0078A484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		958E07FC1F2AD62B0078A484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958E07FE1F2AD62B0078A484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		9599329F1F33004300B4A965 /* LayoutSpec.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LayoutSpec.storyboard; path = ../DisplayNode/Layout/LayoutSpec.storyboard; sourceTree = "<group>"; };
-		959932A01F33004300B4A965 /* SJLayoutSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJLayoutSpecVC.swift; path = ../DisplayNode/Layout/SJLayoutSpecVC.swift; sourceTree = "<group>"; };
-		959932A31F3300D700B4A965 /* SJInsetSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJInsetSpecVC.swift; path = ../DisplayNode/Layout/SJInsetSpecVC.swift; sourceTree = "<group>"; };
-		95A7538B1F330F5600D21896 /* SJStackSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJStackSpecVC.swift; path = ../DisplayNode/Layout/SJStackSpecVC.swift; sourceTree = "<group>"; };
 		95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJTextNodeVC.swift; sourceTree = "<group>"; };
 		95AC18A01F31795F00097ADE /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJButtonNodeVC.swift; sourceTree = "<group>"; };
@@ -80,10 +77,15 @@
 		95DF83EE1F47FB270089D0C7 /* SJStyleSizeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStyleSizeVC.swift; sourceTree = "<group>"; };
 		95E4B9561F34105F005FF79E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95E4B9581F344EC6005FF79E /* ControlNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlNode.swift; sourceTree = "<group>"; };
-		95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJOverlaySpecVC.swift; path = ../DisplayNode/Layout/SJOverlaySpecVC.swift; sourceTree = "<group>"; };
-		95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJRelativeSpecVC.swift; path = ../DisplayNode/Layout/SJRelativeSpecVC.swift; sourceTree = "<group>"; };
-		95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJRatioSpecVC.swift; path = ../DisplayNode/Layout/SJRatioSpecVC.swift; sourceTree = "<group>"; };
-		95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SJAbsoluteVC.swift; path = ../DisplayNode/Layout/SJAbsoluteVC.swift; sourceTree = "<group>"; };
+		DA51E24D1F509038003A81F3 /* LayoutSpec.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LayoutSpec.storyboard; sourceTree = "<group>"; };
+		DA51E24E1F509038003A81F3 /* SJAbsoluteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJAbsoluteVC.swift; sourceTree = "<group>"; };
+		DA51E24F1F509038003A81F3 /* SJInsetSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJInsetSpecVC.swift; sourceTree = "<group>"; };
+		DA51E2501F509038003A81F3 /* SJLayoutSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJLayoutSpecVC.swift; sourceTree = "<group>"; };
+		DA51E2511F509038003A81F3 /* SJOverlaySpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJOverlaySpecVC.swift; sourceTree = "<group>"; };
+		DA51E2521F509038003A81F3 /* SJRatioSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRatioSpecVC.swift; sourceTree = "<group>"; };
+		DA51E2531F509038003A81F3 /* SJRelativeSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJRelativeSpecVC.swift; sourceTree = "<group>"; };
+		DA51E2541F509038003A81F3 /* SJStackSpecVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJStackSpecVC.swift; sourceTree = "<group>"; };
+		DA51E25D1F509083003A81F3 /* SJDisplayNodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SJDisplayNodeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,7 @@
 		958E07F11F2AD62B0078A484 /* ASDK_demo */ = {
 			isa = PBXGroup;
 			children = (
-				95D9F6571F30786B00B7BC96 /* LayoutSpec */,
+				DA51E24C1F509038003A81F3 /* Layout */,
 				95D9F6551F30786400B7BC96 /* DisplayNode */,
 				9579805F1F431BA40063B7C1 /* Style */,
 				95D9F6561F30786400B7BC96 /* Game */,
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				95D9F6611F30803600B7BC96 /* Display.storyboard */,
+				DA51E25D1F509083003A81F3 /* SJDisplayNodeVC.swift */,
 				9579805D1F4317AD0063B7C1 /* SJNodeViewVC.swift */,
 				95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */,
 				95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */,
@@ -183,21 +186,6 @@
 			children = (
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		95D9F6571F30786B00B7BC96 /* LayoutSpec */ = {
-			isa = PBXGroup;
-			children = (
-				9599329F1F33004300B4A965 /* LayoutSpec.storyboard */,
-				959932A01F33004300B4A965 /* SJLayoutSpecVC.swift */,
-				959932A31F3300D700B4A965 /* SJInsetSpecVC.swift */,
-				95A7538B1F330F5600D21896 /* SJStackSpecVC.swift */,
-				95E4B95C1F345964005FF79E /* SJRelativeSpecVC.swift */,
-				95E4B95E1F34648F005FF79E /* SJRatioSpecVC.swift */,
-				95E4B95A1F3450DD005FF79E /* SJOverlaySpecVC.swift */,
-				95E4B9601F346BFC005FF79E /* SJAbsoluteVC.swift */,
-			);
-			path = LayoutSpec;
 			sourceTree = "<group>";
 		};
 		95D9F6581F30787800B7BC96 /* Other */ = {
@@ -229,6 +217,21 @@
 				72F19C0B40FB658638C98A04 /* Pods-ASDK_demo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA51E24C1F509038003A81F3 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				DA51E24D1F509038003A81F3 /* LayoutSpec.storyboard */,
+				DA51E24E1F509038003A81F3 /* SJAbsoluteVC.swift */,
+				DA51E24F1F509038003A81F3 /* SJInsetSpecVC.swift */,
+				DA51E2501F509038003A81F3 /* SJLayoutSpecVC.swift */,
+				DA51E2511F509038003A81F3 /* SJOverlaySpecVC.swift */,
+				DA51E2521F509038003A81F3 /* SJRatioSpecVC.swift */,
+				DA51E2531F509038003A81F3 /* SJRelativeSpecVC.swift */,
+				DA51E2541F509038003A81F3 /* SJStackSpecVC.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				957980631F431BE70063B7C1 /* Style.storyboard in Resources */,
+				DA51E2551F509038003A81F3 /* LayoutSpec.storyboard in Resources */,
 				958E07FD1F2AD62B0078A484 /* LaunchScreen.storyboard in Resources */,
-				959932A11F33004300B4A965 /* LayoutSpec.storyboard in Resources */,
 				958E07FA1F2AD62B0078A484 /* Assets.xcassets in Resources */,
 				958E07F81F2AD62B0078A484 /* Main.storyboard in Resources */,
 				95D9F6621F30803600B7BC96 /* Display.storyboard in Resources */,
@@ -363,19 +366,20 @@
 				95AC189E1F3175AE00097ADE /* SJTextNodeVC.swift in Sources */,
 				95AC18A91F31E38A00097ADE /* SJCollectionNodeVC.swift in Sources */,
 				95AC18AB1F31E42B00097ADE /* SJClass.swift in Sources */,
+				DA51E25A1F509038003A81F3 /* SJRatioSpecVC.swift in Sources */,
 				95D9F6601F307F4C00B7BC96 /* SJImageNodeVC.swift in Sources */,
-				95A7538C1F330F5600D21896 /* SJStackSpecVC.swift in Sources */,
-				959932A21F33004300B4A965 /* SJLayoutSpecVC.swift in Sources */,
 				9519D31B1F4E84D7003344A8 /* ASSDWebImageNode.swift in Sources */,
+				DA51E2571F509038003A81F3 /* SJInsetSpecVC.swift in Sources */,
 				957980651F431C100063B7C1 /* SJStackFlexVC.swift in Sources */,
 				95AC18AD1F31E45E00097ADE /* SJTableNode.swift in Sources */,
-				959932A41F3300D700B4A965 /* SJInsetSpecVC.swift in Sources */,
+				DA51E2591F509038003A81F3 /* SJOverlaySpecVC.swift in Sources */,
 				95AC18A71F31C6DE00097ADE /* SJTableNodeVC.swift in Sources */,
+				DA51E25B1F509038003A81F3 /* SJRelativeSpecVC.swift in Sources */,
 				95D9F65C1F3079CB00B7BC96 /* SJOverviewVC.swift in Sources */,
-				95E4B9611F346BFC005FF79E /* SJAbsoluteVC.swift in Sources */,
 				958E07F31F2AD62B0078A484 /* AppDelegate.swift in Sources */,
 				95D9F65A1F3078B400B7BC96 /* SJTabBarVC.swift in Sources */,
-				95E4B95F1F34648F005FF79E /* SJRatioSpecVC.swift in Sources */,
+				DA51E2561F509038003A81F3 /* SJAbsoluteVC.swift in Sources */,
+				DA51E2581F509038003A81F3 /* SJLayoutSpecVC.swift in Sources */,
 				9519D3191F4E8498003344A8 /* SJTextNode.swift in Sources */,
 				95E4B9571F34105F005FF79E /* Extensions.swift in Sources */,
 				95AC18A51F31BDBF00097ADE /* SJButtonNodeVC.swift in Sources */,
@@ -383,9 +387,9 @@
 				95AC18A11F31795F00097ADE /* Toast.swift in Sources */,
 				9579805E1F4317AD0063B7C1 /* SJNodeViewVC.swift in Sources */,
 				957980611F431BCA0063B7C1 /* SJStyleOverviewVC.swift in Sources */,
+				DA51E25C1F509038003A81F3 /* SJStackSpecVC.swift in Sources */,
+				DA51E25E1F509083003A81F3 /* SJDisplayNodeVC.swift in Sources */,
 				95DF83EF1F47FB270089D0C7 /* SJStyleSizeVC.swift in Sources */,
-				95E4B95B1F3450DD005FF79E /* SJOverlaySpecVC.swift in Sources */,
-				95E4B95D1F345964005FF79E /* SJRelativeSpecVC.swift in Sources */,
 				95E4B9591F344EC6005FF79E /* ControlNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

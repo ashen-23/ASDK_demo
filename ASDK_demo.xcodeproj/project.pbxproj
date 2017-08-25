@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				95D9F6611F30803600B7BC96 /* Display.storyboard */,
-				DA51E25D1F509083003A81F3 /* SJDisplayNodeVC.swift */,
 				9579805D1F4317AD0063B7C1 /* SJNodeViewVC.swift */,
+				DA51E25D1F509083003A81F3 /* SJDisplayNodeVC.swift */,
 				95D9F65F1F307F4C00B7BC96 /* SJImageNodeVC.swift */,
 				95AC189D1F3175AE00097ADE /* SJTextNodeVC.swift */,
 				95AC18A41F31BDBF00097ADE /* SJButtonNodeVC.swift */,

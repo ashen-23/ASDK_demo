@@ -28,6 +28,18 @@ class SJDisplayNodeVC: UIViewController {
         activity.frame = CGRect(x: 0, y: 120, width: SJScreenW, height: 45)
         view.addSubnode(activity)
         
+        
+        // snapkit
+        let aNode = ASDisplayNode()
+        aNode.backgroundColor = UIColor.gray
+        view.addSubnode(aNode)
+        aNode.view.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(activity.view.snp.bottom).offset(20)
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+            make.height.equalTo(150)
+        }
     }
 
     
@@ -93,5 +105,3 @@ fileprivate class ActivityNode: ASDisplayNode {
         return ASCenterLayoutSpec(centeringOptions: .XY, sizingOptions: .minimumXY, child: activity)
     }
 }
-
-

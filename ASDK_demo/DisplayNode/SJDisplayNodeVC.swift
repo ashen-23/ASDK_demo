@@ -19,12 +19,14 @@ class SJDisplayNodeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 手势
-        let gestureNode = GestureNode()
+        // View 添加node
+        let gestureNode = GestureNode() // 手势
         gestureNode.frame = CGRect(x: 0, y: 64, width: SJScreenW, height: 45)
         view.addSubnode(gestureNode)
         
-        
+        let activity = ActivityNode() // node 添加UIView
+        activity.frame = CGRect(x: 0, y: 120, width: SJScreenW, height: 45)
+        view.addSubnode(activity)
         
     }
 
@@ -39,6 +41,8 @@ fileprivate class GestureNode: ASDisplayNode {
         
         super.init()
         
+        // 允许点击
+        textNode.isUserInteractionEnabled = true
         textNode.attributedText = NSAttributedString(string: "点我试试", attributes: defaultAttri())
         addSubnode(textNode)
     }
@@ -60,3 +64,34 @@ fileprivate class GestureNode: ASDisplayNode {
         return ASInsetLayoutSpec(insets: UIEdgeInsets.zero, child: textNode)
     }
 }
+
+fileprivate class ActivityNode: ASDisplayNode {
+
+    var activity = ASDisplayNode { () -> UIView in
+    
+        let aView = UIActivityIndicatorView()
+        aView.backgroundColor = UIColor.clear
+        aView.activityIndicatorViewStyle = .gray
+        return aView
+    }
+    
+    override init() {
+        super.init()
+        
+        backgroundColor = UIColor.white
+        addSubnode(activity)
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        
+        (activity.view as? UIActivityIndicatorView)?.startAnimating()
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        return ASCenterLayoutSpec(centeringOptions: .XY, sizingOptions: .minimumXY, child: activity)
+    }
+}
+
+

@@ -46,14 +46,26 @@ AsyncDisplayKit(更名为Texture，以下简称ASDK)
 
   view2.addSubview(node1.view)
 
-  node1.addSubnode( ASDisplayNode { return view1 })
-
+  // UIView -> ASDisplayNode
+  let activity = ASDisplayNode { () -> UIView! in
+      return UIActivityIndicatorView()
+  }
+  node1.addSubnode(activity)
   ```
 
   - 设置布局
 
   ```swift
+  // AsyncDislayKit 中
   ASStackLayoutSpec(direction: .vertical, spacing: 20, justifyContent: .start, alignItems: .center, children: [mImageNode, mNetText])
+
+  // UIView 中
+  node1.frame = CGRect(x: 0, y: 180, width: 200, height: 100)
+
+  // UIView autolayout
+  node1.view.snp.makeConstraints { (make) in
+      make.edges.equalTo(self.view)
+  }
   ```
 
 

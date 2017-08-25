@@ -12,7 +12,7 @@
         <!--Display NodeVC-->
         <scene sceneID="2hz-XS-lRK">
             <objects>
-                <viewController id="6TW-d7-WhL" customClass="SJDisplayNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="node" id="6TW-d7-WhL" customClass="SJDisplayNodeVC" customModule="ASDK_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zr4-cP-QS8"/>
                         <viewControllerLayoutGuide type="bottom" id="Lpk-DS-Fuc"/>

@@ -9,15 +9,35 @@ AsyncDisplayKit(更名为Texture，以下简称ASDK)
 
 - 什么是 AsyncDisplayKit？
 
-  ​	
+  ​	[AsyncDisplayKit](https://github.com/facebook/AsyncDisplayKit)是Facebook 开源的一个```异步界面渲染```库。
+
+  ​
+
+- 什么时候选用AsyncDisplayKit？
+
+  ​	界面复杂，fps低于60.
+
+  ​
+
 
 - 如何看待ASDisplayNode？
 
   Node -> UIView  ==  UIView -> CALayer
 
+  Node是对UIView的抽象，类似于：UIView是CALaye的抽象。
+
   ​
 
 - 如何使用ASDK？
+  - 导入
+
+  ```swift
+  // pod 导入
+  pod 'AsyncDisplayKit'
+
+  // 使用时引用
+  import AsyncDisplayKit
+  ```
 
   - 添加视图
 
@@ -53,6 +73,7 @@ talk is cheap, show me the code
    - 设置url
 
    ```swift
+   var mNetImgNode = ASNetworkImageNode()
    mNetImgNode.url = URL(string: "https://source.unsplash.com/random/500*500")
 
    // 可以对图片进行特殊处理

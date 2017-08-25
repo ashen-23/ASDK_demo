@@ -21,11 +21,15 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.8):
     - PINCache (= 3.0.1-beta.4)
     - PINRemoteImage/Core
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - AsyncDisplayKit
   - PagingMenuController
+  - SDWebImage
   - SnapKit
 
 SPEC CHECKSUMS:
@@ -34,8 +38,9 @@ SPEC CHECKSUMS:
   PINCache: a89c8f609232afac77128557bd12c861844423d7
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 3b2aa251dac4749d867f7d9056315a520ef6cec8
+PODFILE CHECKSUM: e797009062b1221d9aa0e6895c4263ca20fbb68e
 
 COCOAPODS: 1.2.1

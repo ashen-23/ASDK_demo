@@ -12,4 +12,6 @@ target 'ASDK_demo' do
  pod 'PagingMenuController'
 
  pod 'SnapKit'
+ 
+ pod 'SDWebImage'
 end

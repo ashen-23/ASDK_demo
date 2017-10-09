@@ -9,14 +9,16 @@
 import UIKit
 import AsyncDisplayKit
 
+let patternUrl = "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
+
 enum SJLinkStyle: String {
     case atPerson = "atPerson"
     case topic = "topic"
-    //case custom = "custom"
+    case custom = "custom"
     
     static func getNames() -> [String] {
     
-        return [SJLinkStyle.atPerson.rawValue, SJLinkStyle.topic.rawValue]
+        return [SJLinkStyle.atPerson.rawValue, SJLinkStyle.topic.rawValue, SJLinkStyle.custom.rawValue]
     }
     
     func pattern() -> SJTextRegular {
@@ -29,6 +31,10 @@ enum SJLinkStyle: String {
         case .topic:
             
             return SJTextRegular(type: self, start: "#", end: "#")
+            
+        case .custom:
+            
+            return SJTextRegular(pattern: patternUrl)
         }
     }
 }
@@ -53,7 +59,7 @@ class SJTextNode: ASTextNode {
             
         } else {
         
-            self.patterns = [SJLinkStyle.topic.pattern(), SJLinkStyle.atPerson.pattern()]
+            self.patterns = [SJLinkStyle.topic.pattern(), SJLinkStyle.atPerson.pattern(), SJLinkStyle.custom.pattern()]
         }
         
         // 设置相关属性
@@ -71,14 +77,11 @@ class SJTextNode: ASTextNode {
         if displaySignal {
         
             let attriStr = NSMutableAttributedString(string: text, attributes: SJTextNodeConfig.normalAttri())
-
             patterns?.forEach { [weak self] in
-            
                 self?.normal(pattern: $0, range: range, matches: attriStr)
             }
             
             self.attributedText = attriStr
-
             return
         }
         // 屏蔽掉信号符号
@@ -110,13 +113,13 @@ class SJTextNode: ASTextNode {
         self.attributedText = attriStr
     }
     
-    fileprivate func convert(range: NSRange, pattern: SJTextRegular, index: Int) -> NSRange {
-    
-        let sigCount = pattern.startLength() + pattern.endLength()
-        let location = range.location + pattern.startLength() - sigCount * index
-       // let length = range.length - sigCount
-        return NSRange(location: max(location, 0), length: range.length)
-    }
+//    fileprivate func convert(range: NSRange, pattern: SJTextRegular, index: Int) -> NSRange {
+//
+//        let sigCount = pattern.startLength() + pattern.endLength()
+//        let location = range.location + pattern.startLength() - sigCount * index
+//       // let length = range.length - sigCount
+//        return NSRange(location: max(location, 0), length: range.length)
+//    }
 
     fileprivate func normal(pattern: SJTextRegular, range: NSRange, matches: NSMutableAttributedString) {
         let regular = try! NSRegularExpression(pattern: pattern.pattern, options: .caseInsensitive)
@@ -179,13 +182,8 @@ extension SJTextNode: ASTextNodeDelegate {
 
 struct SJTextRegular {
     
-    var pattern: String {
-    
-        return start + ".*?" + end
-    }
-    
+    var pattern: String
     var start: String
-    
     var end: String
     
     var type: SJLinkStyle
@@ -194,24 +192,24 @@ struct SJTextRegular {
         self.type = type
         self.start = start
         self.end = end
+        
+        self.pattern = start + ".*?" + end
     }
     
-    func startLength() -> Int {
-    
-        return start.characters.count
-    }
-    
-    func endLength() -> Int {
-    
-        return end.characters.count
+    init(pattern: String) {
+        self.pattern = pattern
+        self.type = .custom
+        self.start = ""
+        self.end = ""
     }
 
     func pickUp(source: String) -> String {
     
+        if type == .custom { return source }
+        
         let endTip = end == "\\s" ? " " : end
         
         if source.hasPrefix(start) && source.hasSuffix(endTip) {
-        
             return source.replacingOccurrences(of: start, with: "").replacingOccurrences(of: end, with: "")
         }
         
